@@ -4,11 +4,11 @@ class Products {
       return `
       <li class="products__item">
         <article class="item-card">
-          <h3 class="item-card__heading">${name}<h3/>
+          <h3 class="item-card__heading">${name}</h3>
           <div class="item-card__img">
             <img src="${img}" alt="${name}" />
           </div>
-          <h5 class="item-card__price">${price}</h5>
+          <h5 class="item-card__price">🚀${price.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' })}</h5>
           <button class="button button--primary" type="button">Купить сейчас</button>
         </article>
       </li>
