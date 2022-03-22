@@ -4,29 +4,33 @@ class LocalStorageUtil {
   }
 
   getProducts() {
-    const productsLocalStorage = localStorage.getItem(this.keyName);
+    let productsLocalStorage = localStorage.getItem(this.keyName);
     if (productsLocalStorage !== null) {
       return JSON.parse(productsLocalStorage);
+    } else {
+      return [];
     }
-    return [];
   }
-
   setProducts(id) {
+    id = id.toString();
     let products = this.getProducts();
-    let newProduct = true;
-    const isExist = products.indexOf(id);
+    let isExist = false;
+    let isExistIndex = products.indexOf(id);
 
-    if (isExist === -1) {
-      newProduct = false;
+    if (isExistIndex === -1) {
+      isExist = true;
       products.push(id);
     } else {
-      products.splice(isExist, 1);
+      products.splice(isExistIndex, 1);
     }
+
     localStorage.setItem(this.keyName, JSON.stringify(products));
 
     return {
-      newProduct,
       products,
+      isExist,
     };
   }
 }
+
+const localStorageProducts = new LocalStorageUtil();
