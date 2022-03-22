@@ -16,14 +16,14 @@ class Products {
       el.innerText = this.addLabel;
     }
 
-    shoppingCounter.render(products.length)
+    shoppingCounter.render(products.length);
   }
 
   render() {
     const productsStore = localStorageProducts.getProducts();
 
     const items = CATALOG.map(({ id, name, img, price }) => {
-      id = id.toString()
+      id = id.toString();
 
       let activeState = "";
       let buttonLabel = "";
@@ -35,7 +35,7 @@ class Products {
         activeState = this.activeClassName;
       }
 
-      return  `
+      return `
       <li class="products__item">
         <article class="item-card">
           <h3 class="item-card__heading">${name}</h3>
