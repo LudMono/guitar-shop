@@ -15,6 +15,8 @@ class Products {
       el.classList.remove(this.activeClassName);
       el.innerText = this.addLabel;
     }
+
+    cart.render(products.length)
   }
 
   render() {
@@ -33,7 +35,7 @@ class Products {
         activeState = this.activeClassName;
       }
 
-      return `
+      return  `
       <li class="products__item">
         <article class="item-card">
           <h3 class="item-card__heading">${name}</h3>
