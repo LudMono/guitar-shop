@@ -8,7 +8,8 @@ class ShoppingCounter {
     const productsStore = localStorageProducts.getProducts();
     let counter = products || productsStore.length
     const html = `
-      <div class="shopping-counter">
+      <h1 class="header__heading">Guitar Shop</h1>
+      <div class="header__shopping-counter shopping-counter">
         <div class="shopping-counter__counter">
           <button class="button" type="button" onclick="shoppingCounter.handeClick()">
           <span>🛒</span>

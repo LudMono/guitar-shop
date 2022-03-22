@@ -4,8 +4,8 @@ class Cart {
   }
 
   render() {
-    let totalSum = 0;
     const productsStore = localStorageProducts.getProducts();
+    let totalSum = 0;
     let items = [];
 
     if (productsStore.length) {
@@ -50,7 +50,6 @@ class Cart {
         </div>
       </div>
     `;
-    console.log(productsStore.length);
 
     ROOT_CART.innerHTML = html;
   }
