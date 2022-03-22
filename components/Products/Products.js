@@ -16,7 +16,7 @@ class Products {
       el.innerText = this.addLabel;
     }
 
-    cart.render(products.length)
+    shoppingCounter.render(products.length)
   }
 
   render() {
