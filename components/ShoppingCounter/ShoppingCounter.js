@@ -1,12 +1,11 @@
 class ShoppingCounter {
-
   handeClick() {
     cart.render();
   }
 
   render(products) {
     const productsStore = localStorageProducts.getProducts();
-    let counter = products || productsStore.length
+    let counter = products || productsStore.length;
     const html = `
       <h1 class="header__heading">Guitar Shop</h1>
       <div class="header__shopping-counter shopping-counter">
@@ -23,4 +22,3 @@ class ShoppingCounter {
 }
 
 const shoppingCounter = new ShoppingCounter();
-shoppingCounter.render()

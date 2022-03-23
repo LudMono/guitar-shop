@@ -21,8 +21,8 @@ class Products {
 
   render() {
     const productsStore = localStorageProducts.getProducts();
-
     const items = CATALOG.map(({ id, name, img, price }) => {
+
       id = id.toString();
 
       let activeState = "";
@@ -63,4 +63,3 @@ class Products {
 }
 
 const products = new Products();
-products.render();
